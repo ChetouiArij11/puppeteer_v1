@@ -1,0 +1,23 @@
+<body>
+  <h1>Résultats de la recherche</h1>
+
+  {{#if error}}
+  <p>{{error}}</p>
+  {{else}}
+  {{#if resultat}}
+  <ul>
+    {{#each resultat}}
+    
+    <li>
+      
+        <h2>{{this.productTitle}}</h2>
+        <img src="{{this.productImage}}" alt="">
+        <!--<p>{{this.prixProduct}} £</p>-->
+      
+    </li>
+    {{/each}}
+  </ul>
+  {{else}}
+  <p>Aucun résultat trouvé pour votre recherche.</p>
+  {{/if}}
+  {{/if}}
